@@ -107,17 +107,23 @@ rm(temp,temptd,temptd2,tempnm,rn)
 
 ### *What is the most common month?*
 
+<<<<<<< HEAD
 Overall, the most common month is JUne, considering it is late spring and most of these cities in the more northern climate would expect higher ridership then (See Chart 1).  Also, this is the summer holidy period and we would expect more ridership to increase from April to June.
+||||||| merged common ancestors
+Overall, the most common month is JUne, considering it is late spring and most of these cities in the more northern climate would expect higher ridership then (See Chart 1).  Also, this is the summer holidy period and we would expect more ridership to increase from April to June. 
+=======
+Overall, the most common month is June, considering it is late spring and most of these cities in the more northern climate would expect higher ridership then (See Chart 1).  Also, this is the summer holiday period and we would expect more ridership to increase from April to June.
+>>>>>>> refactoring
 
 Interestingly, ridership in Chicago in the spring is much higher than the other two cities (See Chart 2).
 
 ### *What is the most common day of week?*
 
-The most common day of the week for all cities is Wednesday - the peek business day of the week.  Interestingly, that changes by June during the late spring as the distrubiton is more flat as more holiday visitors use bikes anytime of the week - see Charts 3 and 4 including summary tables.
+The most common day of the week for all cities is Wednesday - the peek business day of the week.  Interestingly, that changes by June during the late spring as the distribution is more flat as more holiday visitors use bikes anytime of the week - see Charts 3 and 4 including summary tables.
 
 ### *What is the most common hour of day?*
 
-The most common of hour of the day overall is between 8 and 9 am in the morning for all cities.  A breakdwon of hours in a day by day of the week, shows this pattern is due to the usual workday (Mon to Friday) - pattern is two peeks for Morning and late afternoon.  The weekends (Saturday and Sunday) shows a rather more normal distributin with a peek at midday (See Charts 5 to #11)
+The most common of hour of the day overall is between 8 and 9 am in the morning for all cities.  A breakdown of hours in a day by day of the week, shows this pattern is due to the usual workday (Mon to Friday) - pattern is two peeks for Morning and late afternoon.  The weekends (Saturday and Sunday) shows a rather more normal distribution with a peek at midday (See Charts 5 to #11)
 
 The pattern is the same for all cities.  Interestingly, Washington shows a complete drop of bicycle use in the springs, with no bike use after 1:00 pm. This could be due to restrictions for their use in the nation capital during the spring and summer months in the afternoon.
 
@@ -138,8 +144,16 @@ ggplot(data_all_wdate, aes(x = as.integer(data_month), na.rm=TRUE))+
   geom_bar( fill = "red")+
   scale_x_continuous("# of Bike Rides Per Month", breaks = c(1:6), labels = c("Jan","Feb","Mar","Apr","May","Jun"))+
   scale_y_continuous(labels = scales::comma)+
+<<<<<<< HEAD
   ggtitle("Number of Bike Riders used Per Month (Jan to June 2017) - Chart 1")+
   theme(plot.title = element_text(hjust = 0.5, size = 12),
+||||||| merged common ancestors
+  ggtitle("Number of Bike Riders used Per Month (Jan to June 2017) - Chart 1")+
+  theme(plot.title = element_text(hjust = 0.5, size = 12), 
+=======
+  ggtitle("Number of Bike Riders Per Month (Jan to June 2017) - Chart 1")+
+  theme(plot.title = element_text(hjust = 0.5, size = 12),
+>>>>>>> refactoring
         axis.text.x = element_text(color = "black", size =8, hjust = 0.5), axis.text.y = element_text(color ="black", size = 8, hjust =0.5))
 
 table(data_all_wdate$data_month)
@@ -200,8 +214,16 @@ ggplot(data_all_wdate, aes(x=as.integer(hrbin), na.rm=TRUE))+
       geom_histogram(position = "stack",bins= 50, fill = "lightblue") +
   scale_x_continuous(limits = c(0,24), breaks = seq(0,24,1))+
   labs(x = "Hours-as Integers (12:00am to 11:59 pm)")+
+<<<<<<< HEAD
   ggtitle("Histogram of Bike Use by Hour of the Day - Chart 6")+
   theme(plot.title = element_text(hjust = 0.5, size = 11),
+||||||| merged common ancestors
+  ggtitle("Histogram of Bike Use by Hour of the Day - Chart 6")+ 
+  theme(plot.title = element_text(hjust = 0.5, size = 11), 
+=======
+  ggtitle(Bike Use over 24 hour period by Hour - Chart 6")+
+  theme(plot.title = element_text(hjust = 0.5, size = 11),
+>>>>>>> refactoring
         axis.title.x.bottom = element_text(hjust = 0.5, size =11),
         axis.text.x = element_text(color = "black", size = 7, hjust = 0.5,
                                    face="bold.italic", angle = 45),
