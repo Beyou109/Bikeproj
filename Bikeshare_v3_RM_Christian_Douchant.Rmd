@@ -1,6 +1,6 @@
 ---
 title: "Bike Share Data Project"
-Desc: "Analyses data from three cities that use bikeshare (Data for Chicago, Washington and New York)"
+desc: "Analyses data from three cities that use bikeshare (Data for Chicago, Washington and New York)"
 author: "Christian Douchant"
 date: "30/06/2019"
 output: html_document
