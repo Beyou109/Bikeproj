@@ -72,10 +72,10 @@ temp$Start_Date <- as.POSIXlt(temp$Start.Time, format = "%Y-%m-%d %H:%M:%S")
 temp$End_Date <- as.POSIXlt(temp$End.Time, format = "%Y-%m-%d %H:%M:%S")
 temp$data_hrmin <- format(as.POSIXlt(temp$Start.Time, format = "%Y-%m-%d %H:%M:%S"), format="%H:%M")
 
-# Convert hour and min into integer scale for latter graphic interpretation
+# Convert hour and minutes into integer scale for latter graphic interpretation
 temptd <- data.frame(table(temp$data_hrmin))
 
-# Number of minutes in a day 60*24 = 1440
+# Number of minutes in a day 60*24 = 1440 for analysis purposes
 rn <- c(1:1440)
 temptd <- cbind(temptd,rn)
 tempnm <- c("data_hm","freq","hrmin")
